@@ -1,11 +1,14 @@
 import React from "react";
 import LogoComponent from "../Logo/LogoComponent";
+import NavbarComponent from "../Navbar/NavbarComponent";
+import styles from "../../styles/Header.module.css";
 
 const HeaderComponent = () => {
   return (
-    <div>
+    <header className={styles.container}>
       <LogoComponent />
-    </div>
+      <NavbarComponent />
+    </header>
   );
 };
 

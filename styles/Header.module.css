@@ -1,6 +1,28 @@
-.logo {
-  border: 1px solid red;
+.container {
   display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+  border: 1px solid rgb(211, 211, 211);
+}
+
+.header_container {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+}
+
+.ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.logo {
+  width: 15rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .logo_title {
