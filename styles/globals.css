@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+:root {
+  --blue: #5463ff;
+  --yellow: #ffc300;
+  --red: #ff1818;
+  --white: #ececec;
+}
+
 * {
   padding: 0;
   margin: 0;

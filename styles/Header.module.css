@@ -3,10 +3,11 @@
   justify-content: space-between;
   padding-top: 1rem;
   padding-bottom: 0.3rem;
-  border: 1px solid rgb(211, 211, 211);
+  background-color: var(--yellow);
+  border-bottom: 1px solid var(--red);
 }
 
-.header_container {
+.nav_container {
   width: 10rem;
   display: flex;
   align-items: center;
@@ -23,8 +24,18 @@
   width: 15rem;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .logo_title {
   font-size: 1.6rem;
+  color: var(--blue);
+}
+
+.links {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: #e0e0e0 1px 1px 0;
 }

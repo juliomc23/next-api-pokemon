@@ -4,13 +4,17 @@ import styles from "../../styles/Header.module.css";
 
 const NavbarComponent = () => {
   return (
-    <nav className={styles.header_container}>
+    <nav className={styles.nav_container}>
       <ul className={styles.ul}>
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/">
+            <a className={styles.links}>Home</a>
+          </Link>
         </li>
         <li>
-          <Link href="/pokemon">Pokemon</Link>
+          <Link href="/pokemon">
+            <a className={styles.links}>Pokemon</a>
+          </Link>
         </li>
       </ul>
     </nav>
