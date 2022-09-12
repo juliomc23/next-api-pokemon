@@ -1,8 +1,16 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
+import BodyComponent from "../components/Body/BodyComponent";
+import FooterComponent from "../components/Footer/FooterComponent";
 import HeaderComponent from "../components/Header/HeaderComponent";
 
-const Pokemon = () => {
+interface Props {
+  results: [];
+}
+
+const Pokemon = (props: Props) => {
+  const { results } = props;
+
   return (
     <div>
       <Head>
@@ -12,9 +20,20 @@ const Pokemon = () => {
       </Head>
       <main>
         <HeaderComponent />
+        <BodyComponent pokemon={results} />
+        <FooterComponent />
       </main>
     </div>
   );
 };
+
+export async function getServerSideProps() {
+  const req = await fetch("https://pokeapi.co/api/v2/pokemon/");
+  const res = await req.json();
+
+  return {
+    props: res,
+  };
+}
 
 export default Pokemon;

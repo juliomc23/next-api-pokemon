@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import BodyComponent from "../components/Body/BodyComponent";
+import FooterComponent from "../components/Footer/FooterComponent";
 import HeaderComponent from "../components/Header/HeaderComponent";
 
 const Home: NextPage = () => {
@@ -12,6 +14,8 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <HeaderComponent />
+        <BodyComponent />
+        <FooterComponent />
       </main>
     </div>
   );

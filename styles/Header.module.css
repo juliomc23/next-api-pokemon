@@ -4,7 +4,7 @@
   padding-top: 1rem;
   padding-bottom: 0.3rem;
   background-color: var(--yellow);
-  border-bottom: 1px solid var(--red);
+  margin-bottom: 2rem;
 }
 
 .nav_container {
