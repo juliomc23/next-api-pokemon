@@ -12,7 +12,7 @@ const NavbarComponent = () => {
           </Link>
         </li>
         <li>
-          <Link href="/pokemon">
+          <Link href="/pokedex">
             <a className={styles.links}>Pokemon</a>
           </Link>
         </li>
