@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import BodyComponent from "../components/Body/BodyComponent";
 import FooterComponent from "../components/Footer/FooterComponent";
 import HeaderComponent from "../components/Header/HeaderComponent";
+
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +15,13 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <HeaderComponent />
-        <BodyComponent />
+        <Image
+          src="/images/Pokemon.png"
+          alt="Pokemon-Logo"
+          width="100%"
+          height="35%"
+          layout="responsive"
+        />
         <FooterComponent />
       </main>
     </div>

@@ -2,7 +2,6 @@ import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
 import Head from "next/head";
 import FooterComponent from "../../components/Footer/FooterComponent";
 import HeaderComponent from "../../components/Header/HeaderComponent";
-import Pokemon from "../pokedex";
 
 interface Pokemon {
   name: string;

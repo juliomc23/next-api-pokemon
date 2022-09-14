@@ -1,15 +1,23 @@
 import Head from "next/head";
-import React, { useState } from "react";
-import BodyComponent from "../components/Body/BodyComponent";
+import Link from "next/link";
+import Image from "next/image";
 import FooterComponent from "../components/Footer/FooterComponent";
 import HeaderComponent from "../components/Header/HeaderComponent";
+
+import style from "../styles/Home.module.css";
 
 interface Props {
   results: [];
 }
 
+interface Pokemon {
+  name: string;
+  url: string;
+}
+
 const Pokemon = (props: Props) => {
   const { results } = props;
+  let id = 0;
 
   return (
     <div>
@@ -20,7 +28,34 @@ const Pokemon = (props: Props) => {
       </Head>
       <main>
         <HeaderComponent />
-        <BodyComponent pokemon={results} />
+        <div className={style.container}>
+          {results.map((pokemon: Pokemon) => {
+            id++;
+            return (
+              <Link key={pokemon.name} href={`/pokemon/${pokemon.name}`}>
+                <div className={style.border}>
+                  <div className={style.superior}>
+                    <Image
+                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`}
+                      alt={pokemon.name}
+                      width={110}
+                      height={90}
+                    />
+                  </div>
+                  <div className={style.superior_circle}>
+                    <div className={style.interior_circle}></div>
+                  </div>
+                  <div className={style.inferior}>
+                    <span>
+                      {pokemon.name[0].toUpperCase() +
+                        pokemon.name.substring(1)}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
         <FooterComponent />
       </main>
     </div>
