@@ -7,11 +7,12 @@
 .border {
   border: 8px solid black;
   width: 15rem;
-  height: 20rem;
+  height: 15rem;
   margin-bottom: 10px;
   position: relative;
   border-radius: 2rem;
   cursor: pointer;
+  border-radius: 99rem;
 }
 
 .superior {
@@ -20,9 +21,9 @@
   align-items: center;
   border-bottom: 4px solid black;
   background-color: var(--red);
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-  height: 200px;
+  border-top-left-radius: 7.5rem;
+  border-top-right-radius: 7.5rem;
+  height: 125px;
 }
 
 .superior_circle {
@@ -34,8 +35,8 @@
   height: 3rem;
   border-radius: 99rem;
   position: absolute;
-  top: 173px;
-  left: 89px;
+  top: 100px;
+  left: 91px;
   background-color: white;
 }
 
