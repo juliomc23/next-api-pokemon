@@ -1,10 +1,27 @@
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import FooterComponent from "../../components/Footer/FooterComponent";
 import HeaderComponent from "../../components/Header/HeaderComponent";
 
+import { useState, useEffect } from "react";
+
+import {
+  getFirstAbility,
+  getSecondAbility,
+} from "../../services/habilitiesFetch";
+
 interface Pokemon {
   name: string;
+  id: number;
+  abilities: Array<Habilities>;
+}
+
+interface Habilities {
+  ability: {
+    name: string;
+    url: string;
+  };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -35,7 +52,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export default function PokemonName(props: Pokemon) {
-  console.log(props);
+  const id = props.id;
+
+  const [firstAbility, setFirstAbility] = useState("");
+  const [secondAbility, setSecondAbility] = useState("");
+
+  useEffect(() => {
+    getFirstAbility(props, setFirstAbility),
+      getSecondAbility(props, setSecondAbility);
+  }, [props]);
 
   return (
     <div>
@@ -47,7 +72,23 @@ export default function PokemonName(props: Pokemon) {
 
       <main>
         <HeaderComponent />
-        <h2>{props.name}</h2>
+        <div>
+          <Image
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+            alt="Front pokemon image"
+            width={200}
+            height={200}
+          />
+        </div>
+        <article>
+          <span>Abilities</span>
+          <p>
+            {props.abilities[0].ability.name} : {secondAbility}
+          </p>
+          <p>
+            {props.abilities[1].ability.name} : {firstAbility}
+          </p>
+        </article>
         <FooterComponent />
       </main>
     </div>

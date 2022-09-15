@@ -46,10 +46,7 @@ const Pokemon = (props: Props) => {
                     <div className={style.interior_circle}></div>
                   </div>
                   <div className={style.inferior}>
-                    <span>
-                      {pokemon.name[0].toUpperCase() +
-                        pokemon.name.substring(1)}
-                    </span>
+                    <span className={style.pokemonName}>{pokemon.name}</span>
                   </div>
                 </div>
               </Link>
