@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           src="/images/Pokemon.png"
           alt="Pokemon-Logo"
           width="100%"
-          height="35%"
+          height="36%"
           layout="responsive"
         />
         <FooterComponent />
