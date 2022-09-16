@@ -60,7 +60,9 @@ const Pokemon = (props: Props) => {
 };
 
 export async function getStaticProps() {
-  const req = await fetch("https://pokeapi.co/api/v2/pokemon/");
+  const req = await fetch(
+    "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
+  );
   const res = await req.json();
 
   return {
