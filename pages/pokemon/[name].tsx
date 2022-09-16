@@ -36,7 +36,9 @@ interface Habilities {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const req = await fetch("https://pokeapi.co/api/v2/pokemon");
+  const req = await fetch(
+    "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
+  );
   const res = await req.json();
 
   const paths = res.results.map((pokemon: Pokemon) => {
