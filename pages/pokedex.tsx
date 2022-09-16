@@ -59,7 +59,7 @@ const Pokemon = (props: Props) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const req = await fetch("https://pokeapi.co/api/v2/pokemon/");
   const res = await req.json();
 

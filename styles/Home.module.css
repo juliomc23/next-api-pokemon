@@ -69,3 +69,66 @@
   font-weight: bold;
   text-transform: capitalize;
 }
+
+.pokemonCard {
+  background-image: url("/images/850-8501248_bowtruckle-pokdex-fantastic-beasts-pokmon-mashup.png");
+  background-size: 100% 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pokeImage {
+  position: absolute;
+  left: 18%;
+  top: 20%;
+}
+
+.pokeName {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 21%;
+  left: 51%;
+}
+
+.pokeTypes {
+  display: flex;
+  position: absolute;
+  top: 39%;
+  left: 54%;
+}
+
+.pokeInfo {
+  display: flex;
+  width: 90rem;
+  justify-content: space-around;
+  position: absolute;
+  top: 81%;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.pokeAbilities {
+  font-size: 2rem;
+  position: absolute;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 55%;
+}
+
+.closePokemon {
+  height: 4.4rem;
+  width: 8.2rem;
+  position: absolute;
+  top: 3%;
+  left: 90.5%;
+  cursor: pointer;
+}
